@@ -21,11 +21,11 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  }, []);
+  // useLayoutEffect(() => {
+  //   navigation.setOptions({
+  //     headerShown: false,
+  //   });
+  // }, []);
 
   useEffect(() => {
     getFeaturedRestaurants()

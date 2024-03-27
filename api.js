@@ -17,7 +17,7 @@ export const getFeaturedRestaurants = () => {
 };
 
 export const getCategories = () => {
-  return SanityClient(`
+  return sanityQuery(`
     *[_type=="category"] 
   `);
 };

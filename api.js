@@ -26,13 +26,16 @@ export const getFeaturedRestaurantById = (id) => {
   return sanityQuery(
     `
   *[_type=="featured" && _id == $id] {
-    ..., 
-    restaurants[] -> {
-      ...,
-      dishes[] -> {
-        name
-      }
+    ...,
+  restaurants[] -> {
+    ...,
+    dishes[] -> {
+      ...
+    },
+    type -> {
+      name
     }
+  }
   }[0]
   `,
     { id }

@@ -1,5 +1,5 @@
-import { Provider } from "react-redux";
 import Navigation from "./navigation";
+import { Provider } from "react-redux";
 import { store } from "./store";
 
 export default function App() {
